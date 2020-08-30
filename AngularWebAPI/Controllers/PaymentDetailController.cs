@@ -9,7 +9,7 @@ using AngularWebAPI.Models;
 
 namespace AngularWebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PaymentDetailController : ControllerBase
     {

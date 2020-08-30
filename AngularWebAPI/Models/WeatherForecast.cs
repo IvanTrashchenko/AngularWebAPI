@@ -1,6 +1,6 @@
 using System;
 
-namespace AngularWebAPI
+namespace AngularWebAPI.Models
 {
     public class WeatherForecast
     {

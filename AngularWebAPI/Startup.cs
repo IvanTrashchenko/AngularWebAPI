@@ -32,7 +32,11 @@ namespace AngularWebAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
-            services.AddControllers();
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
 
             services.AddDbContext<PaymentDetailContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));

@@ -20,14 +20,14 @@ namespace AngularWebAPI.Controllers
             _context = context;
         }
 
-        // GET: api/PaymentDetail
+        // GET: PaymentDetail
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PaymentDetail>>> GetPaymentDetails()
         {
             return await _context.PaymentDetails.ToListAsync();
         }
 
-        // GET: api/PaymentDetail/5
+        // GET: PaymentDetail/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PaymentDetail>> GetPaymentDetail(int id)
         {
@@ -41,7 +41,7 @@ namespace AngularWebAPI.Controllers
             return paymentDetail;
         }
 
-        // PUT: api/PaymentDetail/5
+        // PUT: PaymentDetail/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -73,7 +73,7 @@ namespace AngularWebAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/PaymentDetail
+        // POST: PaymentDetail
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -85,7 +85,7 @@ namespace AngularWebAPI.Controllers
             return CreatedAtAction("GetPaymentDetail", new { id = paymentDetail.PMId }, paymentDetail);
         }
 
-        // DELETE: api/PaymentDetail/5
+        // DELETE: PaymentDetail/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<PaymentDetail>> DeletePaymentDetail(int id)
         {

@@ -5,7 +5,13 @@ import { PaymentDetail } from './payment-detail.model';
   providedIn: 'root'
 })
 export class PaymentDetailService {
-  FormData: PaymentDetail
+  formData: PaymentDetail = {
+    CVV: null,
+    CardNumber: null,
+    CardOwnerName: null,
+    ExpirationDate: null,
+    PMId: null
+  }
   
   constructor() { }
 }
